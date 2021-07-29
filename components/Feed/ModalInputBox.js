@@ -36,24 +36,24 @@ function ModalInputBox({
         <div
           id="overlay"
           onClick={onClose}
-          className=" fixed h-screen z-50 inset-x-0 bottom-0 bg-gray-400 opacity-60"
+          className=" fixed h-screen z-50 inset-x-0 bottom-0 bg-gray-400 dark:bg-[#3a3b3c] dark:bg-opacity-40 bg-opacity-60"
         />
         <div
           id="modal"
-          className="bg-white shadow-3xl p-4 rounded-xl z-50 absolute w-1/3"
+          className="bg-white dark:bg-[#242526] dark:border-[#3a3b3c] border border-gray-100 shadow-3xl p-4 rounded-xl z-50 absolute w-1/3"
         >
           <div id="header-modal" className="flex items-center ">
-            <h1 className="flex flex-grow text-lg font-semibold justify-center">
+            <h1 className="flex flex-grow text-lg font-semibold justify-center dark:text-[#e4e6eb]">
               Create Post
             </h1>
             <button
               onClick={onClose}
-              className="h-8 w-8 bg-gray-100 rounded-full justify-center items-center flex hover:brightness-90 duration-500"
+              className="h-8 w-8 bg-gray-100 dark:bg-[#3a3b3c] dark:text-[#e4e6eb] rounded-full justify-center items-center flex hover:brightness-90 duration-500"
             >
               <XIcon className="h-6" />
             </button>
           </div>
-          <hr className="my-4" />
+          <hr className="my-4 dark:border-[#3a3b3c]" />
           <div>
             <div className="flex space-x-3 items-center">
               <Image
@@ -64,12 +64,12 @@ function ModalInputBox({
                 className="rounded-full border cursor-pointer hover:brightness-75 duration-300"
               />
               <label>
-                <h1 className="text-sm font-semibold pb-1">
+                <h1 className="text-sm font-semibold pb-1 dark:text-[#e4e6eb]">
                   {session.user.name}
                 </h1>
-                <div className="flex bg-gray-100 rounded-md p-1 px-2 items-center space-x-1 cursor-pointer hover:bg-gray-200">
+                <div className="flex bg-gray-100 dark:bg-[#3a3b3c] dark:text-[#e4e6eb]  rounded-md p-1 px-2 items-center space-x-1 cursor-pointer hover:bg-gray-200">
                   <UsersIcon className="h-3" />
-                  <h1 className="text-xs font-medium text-gray-600">
+                  <h1 className="text-xs font-medium text-gray-600 dark:text-[#e4e6eb]">
                     Friend except
                   </h1>
                   <ChevronDownIcon className="h-3" />
@@ -80,15 +80,15 @@ function ModalInputBox({
               <textarea
                 ref={inputRef}
                 id=""
-                rows="2"
+                rows="3"
                 placeholder={`What on your mind, ${session.user.name}?`}
-                className="w-full focus:outline-none"
+                className="w-full focus:outline-none text-2xl dark:bg-transparent dark:placeholder-[#b0b3b8] dark:text-[#e4e6eb]"
               />
               {imageToPost && (
-                <div className="w-full h-72 border rounded-xl object-cover relative mb-5 group">
+                <div className="w-full h-72 border rounded-xl object-cover relative mb-5 group dark:border-[#3a3b3c]">
                   <div
                     onClick={removeImage}
-                    className="h-6 w-6 bg-white border border-gray-100 flex justify-center items-center rounded-full absolute top-3 right-3 cursor-pointer group-hover:scale-110 duration-500 z-10"
+                    className="h-6 w-6 bg-white dark:bg-[#3a3b3c] dark:text-[#e4e6eb] dark:border-0 border border-gray-100 flex justify-center items-center rounded-full absolute top-3 right-3 cursor-pointer group-hover:scale-110 duration-500 z-10"
                   >
                     <XIcon className="h-4" />
                   </div>
@@ -108,11 +108,13 @@ function ModalInputBox({
                   />
                 </div>
               )}
-              <div className="flex justify-around p-2 px-4 border border-gray-200 rounded-xl shadow items-center cursor-pointer">
-                <h1 className="flex flex-grow text-sm">Add to Your Post</h1>
+              <div className="dark:border-[#3a3b3c] flex justify-around p-2 px-4 border border-gray-200 rounded-xl shadow items-center cursor-pointer">
+                <h1 className="flex flex-grow text-sm dark:text-[#e4e6eb]">
+                  Add to Your Post
+                </h1>
                 <label
                   htmlFor="uploadimg"
-                  className="h-10 w-10 rounded-full hover:bg-gray-100 cursor-pointer items-center justify-center flex duration-500"
+                  className="h-10 w-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#3a3b3c] cursor-pointer items-center justify-center flex duration-500"
                 >
                   <CameraIcon className="h-6 text-green-400" />
                   <input

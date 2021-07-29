@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import HeaderItems from "./HeaderItems";
 import RightIcon from "./RightIcon";
+import RightHeader from "./RightHeader";
 import {
   BeakerIcon,
   SearchIcon,
@@ -12,6 +13,8 @@ import {
   BellIcon,
   ChevronDownIcon,
   PlusIcon,
+  LightBulbIcon,
+  MoonIcon,
 } from "@heroicons/react/solid";
 
 import {
@@ -23,12 +26,12 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/outline";
 import { signOut, useSession } from "next-auth/client";
-
+import { ThemeContext } from "../hooks/ThemeContext";
 function Header() {
   const [session] = useSession();
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-white py-1 px-3 flex items-center shadow">
+      <header className="sticky top-0 z-50 w-full bg-white dark:bg-[#242526] py-1 px-3 flex items-center shadow">
         {/* Left header */}
         <div className="flex space-x-2 items-center justify-start">
           <Image
@@ -38,15 +41,15 @@ function Header() {
             layout="fixed"
             className="cursor-pointer"
           />
-          <div className="bg-gray-100 h-10 w-10 items-center justify-center rounded-full flex xl:hidden">
-            <SearchIcon className="h-5 text-gray-500" />
+          <div className="bg-gray-100   h-10 w-10 items-center justify-center rounded-full flex xl:hidden">
+            <SearchIcon className="h-5 text-gray-500 dark:text-[#3a3b3c]" />
           </div>
-          <div className="bg-gray-100 h-9 rounded-full items-center px-2 space-x-1 hidden xl:inline-flex w-60">
-            <SearchIcon className="h-5 text-gray-500" />
+          <div className="bg-gray-100 dark:bg-[#3a3b3c] h-9 rounded-full items-center px-2 space-x-1 hidden xl:inline-flex w-60">
+            <SearchIcon className="h-5 text-gray-500 dark:text-[#e4e6eb]" />
             <input
               type="text"
               placeholder="Search Facebook"
-              className="bg-gray-100  focus:outline-none placeholder-gray-500 font-light text-sm flex-shrink w-full"
+              className="bg-gray-100 dark:bg-[#3a3b3c] dark:placeholder-[#b0b3b8] dark:text-[#e4e6eb]  focus:outline-none placeholder-gray-500 font-light text-sm flex-shrink w-full"
             />
           </div>
         </div>
@@ -73,29 +76,7 @@ function Header() {
         </div>
         {/* Right header */}
         <div className="flex space-x-4 sm:space-x-2 items-center justify-end">
-          <div
-            onClick={signOut}
-            className="hidden xl:flex items-center space-x-2 rounded-full p-1 hover:bg-gray-100 cursor-pointer transition-bg"
-          >
-            <Image
-              className="rounded-full cursor-pointer"
-              src={session.user.image}
-              height="28"
-              width="28"
-            />
-            <h1 className="whitespace-nowrap text-xs pr-2">
-              {session.user.name}
-            </h1>
-          </div>
-          <div className="flex xl:hidden">
-            <RightIcon Icon={PlusIcon} />
-          </div>
-          <div className="hidden xl:flex">
-            <RightIcon Icon={ViewGridIcon} />
-          </div>
-          <RightIcon Icon={ChatIcon} />
-          <RightIcon Icon={BellIcon} className="hidden" />
-          <RightIcon Icon={ChevronDownIcon} />
+          <RightHeader />
         </div>
       </header>
     </>

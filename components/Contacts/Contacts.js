@@ -38,12 +38,12 @@ function Contacts() {
           // style={{ height: 800 }}
         >
           <div className="flex space-x-4 py-2 mr-3">
-            <h1 className="flex flex-grow text-sm text-gray-600 items-center">
+            <h1 className="flex flex-grow text-sm text-gray-600 dark:text-[#b0b3b8] items-center">
               Contacts
             </h1>
-            <VideoCameraIcon className="h-5 text-gray-500" />
-            <SearchIcon className="h-5 text-gray-500" />
-            <DotsHorizontalIcon className="h-5 text-gray-500" />
+            <VideoCameraIcon className="h-5 text-gray-500 dark:text-[#b0b3b8]" />
+            <SearchIcon className="h-5 text-gray-500 dark:text-[#b0b3b8]" />
+            <DotsHorizontalIcon className="h-5 text-gray-500 dark:text-[#b0b3b8]" />
           </div>
           <div className="flex flex-col space-y-1">
             {friends.map((friend) => (

@@ -1,9 +1,18 @@
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {},
+    // colors: {
+    //   fb: {
+    //     main: "#18191a",
+    //     400: "#242526	",
+    //     300: "#3a3b3c",
+    //     200: "#e4e6eb",
+    //     100: "#b0b3b8",
+    //   },
+    // },
     boxShadow: {
       sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
       DEFAULT:

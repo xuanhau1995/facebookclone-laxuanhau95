@@ -3,7 +3,7 @@ import Image from "next/dist/client/image";
 
 function ShortCut({ image, title }) {
   return (
-    <div className="flex items-center space-x-2 hover:bg-gray-200 h-11 pl-2 rounded-xl cursor-pointer">
+    <div className="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-[#3a3b3c] h-11 pl-2 rounded-xl cursor-pointer">
       {image && (
         <Image
           src={image}
@@ -13,7 +13,9 @@ function ShortCut({ image, title }) {
           className="rounded-md"
         />
       )}
-      <h1 className="text-xs font-medium hidden xl:flex">{title}</h1>
+      <h1 className="text-xs font-medium hidden xl:flex dark:text-[#e4e6eb]">
+        {title}
+      </h1>
     </div>
   );
 }

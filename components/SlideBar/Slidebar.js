@@ -42,13 +42,13 @@ function Slidebar() {
               />
               <SlideBarRow IconBg={ChevronDownIcon} title="See More" />
             </div>
-            <hr className="ml-2 mt-2" />
+            <hr className="ml-2 mt-2 dark:border-[#3a3b3c]" />
             <div className="z-0">
               <div className="flex group p-2">
-                <h1 className="flex flex-grow text-gray-600 text-xs md:text-sm">
+                <h1 className="flex flex-grow text-gray-600 dark:text-[#e4e6eb] text-xs md:text-base font-semibold">
                   Your Shortcuts
                 </h1>
-                <button className="text-blue-500 text-xs px-2 rounded-md opacity-0 group-hover:opacity-100 transition ease-out duration-300 hover:bg-blue-50">
+                <button className="text-blue-500 dark:hover:bg-[#3a3b3c] text-xs px-2 rounded-md opacity-0 group-hover:opacity-100 transition ease-out duration-300 hover:bg-blue-50">
                   Edit
                 </button>
               </div>

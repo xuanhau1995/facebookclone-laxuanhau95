@@ -86,9 +86,9 @@ function CreateStory() {
   };
   return (
     <>
-      <div className="bg-white border border-gray-200 shadow rounded-xl p-3 space-y-3">
+      <div className="bg-white dark:bg-[#242526] dark:border-[#242526] border border-gray-200 shadow rounded-xl p-3 space-y-3">
         <div className="flex space-x-3">
-          <div className="h-10 w-10 relative rounded-full border hover:brightness-75 transition ease-in-out duration-300 cursor-pointer">
+          <div className="dark:border-[#242526] h-10 w-10 relative rounded-full border hover:brightness-75 transition ease-in-out duration-300 cursor-pointer">
             <Image
               src={session.user.image}
               layout="fill"
@@ -97,14 +97,14 @@ function CreateStory() {
           </div>
           <div
             onClick={toggleModal}
-            className="bg-gray-100 h-10 rounded-full flex-grow items-center flex cursor-pointer hover:bg-gray-200 transition ease-in-out duration-300"
+            className="bg-gray-100 dark:bg-[#3a3b3c]   h-10 rounded-full flex-grow items-center flex cursor-pointer hover:bg-gray-200 transition ease-in-out duration-300"
           >
-            <h1 className="pl-3 text-sm text-gray-600">
+            <h1 className="pl-3 text-sm text-gray-600 dark:text-[#e4e6eb]">
               What on your mind, {session.user.name}?
             </h1>
           </div>
         </div>
-        <hr />
+        <hr className="dark:border-[#3a3b3c]" />
         <div className="flex justify-evenly">
           <OptionItems
             Icon={VideoCameraIcon}
@@ -126,17 +126,19 @@ function CreateStory() {
           />
         </div>
       </div>
-      <ModalInputBox
-        inputRef={inputRef}
-        onClick={sendPost}
-        modal={modal}
-        onClose={toggleModal}
-        imageToPost={imageToPost}
-        src={imageToPost}
-        removeImage={removeImage}
-        filepickerRef={filepickerRef}
-        addImageToPost={addImageToPost}
-      />
+      {modal && (
+        <ModalInputBox
+          inputRef={inputRef}
+          onClick={sendPost}
+          modal={modal}
+          onClose={toggleModal}
+          imageToPost={imageToPost}
+          src={imageToPost}
+          removeImage={removeImage}
+          filepickerRef={filepickerRef}
+          addImageToPost={addImageToPost}
+        />
+      )}
     </>
   );
 }
