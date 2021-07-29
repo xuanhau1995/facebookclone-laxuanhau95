@@ -3,8 +3,8 @@ import React from "react";
 function FormLogin({ onClick }) {
   return (
     <>
-      <div className="flex justify-end">
-        <form className="bg-white shadow-xl rounded-xl p-4 flex flex-col space-y-4 w-4/5">
+      <div className="flex justify-center">
+        <form className="bg-white shadow-xl rounded-xl p-4 py-6 flex flex-col space-y-4 w-full sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px]">
           <input type="text" placeholder="Email Address" className="input" />
           <input type="password" placeholder="Password" className="input" />
           <button
