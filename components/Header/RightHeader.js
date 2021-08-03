@@ -55,15 +55,17 @@ const RightHeader = () => {
       </div>
       <RightIcon Icon={ChatIcon} />
       <RightIcon Icon={BellIcon} className="hidden" />
-      {theme === "light" ? (
-        <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <RightIcon Icon={MoonIcon} />
-        </div>
-      ) : (
-        <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <RightIcon Icon={LightBulbIcon} />
-        </div>
-      )}
+      <div className="hidden md:flex">
+        {theme === "light" ? (
+          <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            <RightIcon Icon={MoonIcon} />
+          </div>
+        ) : (
+          <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            <RightIcon Icon={LightBulbIcon} />
+          </div>
+        )}
+      </div>
       <RightIcon Icon={ChevronDownIcon} />
     </>
   );
