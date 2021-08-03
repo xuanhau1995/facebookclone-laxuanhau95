@@ -39,6 +39,8 @@ function Header() {
             width={36}
             height={36}
             layout="fixed"
+            alt="image"
+            loading="eager"
             className="cursor-pointer"
           />
           <div className="bg-gray-100   h-10 w-10 items-center justify-center rounded-full flex xl:hidden">

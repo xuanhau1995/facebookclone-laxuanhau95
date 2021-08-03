@@ -91,6 +91,8 @@ function CreateStory() {
           <div className="dark:border-[#242526] h-10 w-10 relative rounded-full border hover:brightness-75 transition ease-in-out duration-300 cursor-pointer">
             <Image
               src={session.user.image}
+              alt="image"
+              loading="eager"
               layout="fill"
               className="rounded-full"
             />

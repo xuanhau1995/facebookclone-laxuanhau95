@@ -4,7 +4,14 @@ function SlideBarRow({ src, title, Icon, description, IconBg }) {
   return (
     <div className="flex pl-2 h-11 hover:bg-gray-200 dark:hover:bg-[#3a3b3c] rounded-xl cursor-pointer items-center space-x-3 transition ease-in-out duration-300 ">
       {src && (
-        <Image src={src} height="30" width="30" className="rounded-full" />
+        <Image
+          alt="image"
+          loading="eager"
+          src={src}
+          height="30"
+          width="30"
+          className="rounded-full"
+        />
       )}
       {Icon && <Icon className="h-10 text-blue-500" height="30" width="30" />}
       {IconBg && (

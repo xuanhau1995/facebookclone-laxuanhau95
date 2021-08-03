@@ -47,6 +47,8 @@ function Stories() {
             <div className="relative w-full h-28">
               <Image
                 src={session.user.image}
+                alt="image"
+                loading="eager"
                 layout="fill"
                 className="object-cover filter rounded-t-xl"
               />

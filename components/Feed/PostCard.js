@@ -15,6 +15,8 @@ function PostCard({ name, email, message, image, postImage, timestamp }) {
           <div className="relative h-10 w-10">
             <Image
               src={image}
+              alt="image"
+              loading="eager"
               objectFit="cover"
               layout="fill"
               className="rounded-full h-10 w-10 border"

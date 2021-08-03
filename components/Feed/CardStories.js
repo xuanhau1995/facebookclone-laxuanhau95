@@ -9,6 +9,8 @@ function CardStories({ src, profile, name }) {
       </div>
       <Image
         src={profile}
+        alt="image"
+        loading="eager"
         layout="fill"
         className="object-cover rounded-xl brightness-75 filter z-0 transform transition duration-500 hover:brightness-50"
       />

@@ -58,6 +58,8 @@ function ModalInputBox({
             <div className="flex space-x-3 items-center">
               <Image
                 src={session.user.image}
+                alt="image"
+                loading="eager"
                 height={42}
                 width={42}
                 layout="fixed"

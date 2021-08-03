@@ -40,6 +40,8 @@ const RightHeader = () => {
           src={session.user.image}
           height="28"
           width="28"
+          alt="image"
+          loading="eager"
         />
         <h1 className="whitespace-nowrap text-xs pr-2 dark:text-[#e4e6eb]">
           {session.user.name}
