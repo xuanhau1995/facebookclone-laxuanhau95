@@ -11,6 +11,8 @@ function ShortCut({ image, title }) {
           height="30"
           width="30"
           className="rounded-md"
+          loading="eager"
+          alt="img"
         />
       )}
       <h1 className="text-xs font-medium hidden xl:flex dark:text-[#e4e6eb]">

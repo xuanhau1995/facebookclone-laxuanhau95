@@ -43,10 +43,18 @@ function PostCard({ name, email, message, image, postImage, timestamp }) {
         </div>
       </div>
       <div className="pt-4 space-y-4">
-        <p className="text-xs text-gray-800 pl-4">{message}</p>
+        <p className="text-xs text-gray-800 pl-4 dark:text-[#e4e6eb]">
+          {message}
+        </p>
         {postImage && (
           <div className="relative h-56 md:h-96 bg-white">
-            <Image src={postImage} objectFit="cover" layout="fill" />
+            <Image
+              src={postImage}
+              loading="eager"
+              alt="img"
+              objectFit="cover"
+              layout="fill"
+            />
           </div>
         )}
       </div>

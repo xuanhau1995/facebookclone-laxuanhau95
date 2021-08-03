@@ -15,6 +15,8 @@ function Login() {
               <div className="mt-6 -m-12 md:-m-12 lg:-m-12">
                 <Image
                   src={fbLogo}
+                  loading="eager"
+                  alt="img"
                   height={70}
                   width={250}
                   objectFit="contain"

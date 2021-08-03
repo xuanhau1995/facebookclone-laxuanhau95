@@ -38,7 +38,7 @@ function ModalInputBox({
           onClick={onClose}
           className=" fixed h-screen z-50 inset-x-0 bottom-0 bg-gray-400 dark:bg-[#3a3b3c] dark:bg-opacity-40 bg-opacity-60"
         />
-        <div
+        <form
           id="modal"
           className="bg-white dark:bg-[#242526] dark:border-[#3a3b3c] border border-gray-100 shadow-3xl p-4 rounded-xl z-50 absolute w-1/3"
         >
@@ -107,6 +107,8 @@ function ModalInputBox({
                     objectFit="cover"
                     layout="fill"
                     className="h-full w-full rounded-xl z-0"
+                    loading="eager"
+                    alt="img"
                   />
                 </div>
               )}
@@ -143,7 +145,7 @@ function ModalInputBox({
               </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );

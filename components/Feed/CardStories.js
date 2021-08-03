@@ -5,7 +5,13 @@ function CardStories({ src, profile, name }) {
   return (
     <div className="w-24 h-44 rounded-xl relative shadow cursor-pointer hover:shadow-xl transition duration-300 z-20">
       <div className="border-2 border-blue-500 absolute z-10 h-9 w-9 rounded-full m-3">
-        <Image src={src} layout="fill" className="rounded-full" />
+        <Image
+          loading="eager"
+          alt="img"
+          src={src}
+          layout="fill"
+          className="rounded-full"
+        />
       </div>
       <Image
         src={profile}
