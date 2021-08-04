@@ -40,7 +40,7 @@ function ModalInputBox({
         />
         <form
           id="modal"
-          className="bg-white dark:bg-[#242526] dark:border-[#3a3b3c] border border-gray-100 shadow-3xl p-4 rounded-xl z-50 absolute w-1/3"
+          className="bg-white dark:bg-[#242526] dark:border-[#3a3b3c] border border-gray-100 shadow-3xl p-4 rounded-xl z-50 absolute w-[340px] sm:w-[400px] md:w-[500px] lg:w-[500px] xl:w-1/3"
         >
           <div id="header-modal" className="flex items-center ">
             <h1 className="flex flex-grow text-lg font-semibold justify-center dark:text-[#e4e6eb]">
